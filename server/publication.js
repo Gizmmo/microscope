@@ -5,3 +5,7 @@ Meteor.publish('posts', function(){
         title: true
     }});
 });
+
+Meteor.publish('comments', function() {
+    return Comments.find();
+});
