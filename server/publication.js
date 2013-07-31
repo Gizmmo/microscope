@@ -1,11 +1,6 @@
-Meteor.publish('posts', function(){
-    return Posts.find({}, {fields: {
-        url: true,
-        author: true,
-        title: true
-    }});
+Meteor.publish('posts', function() {
+    return Posts.find();
 });
-
 Meteor.publish('comments', function() {
     return Comments.find();
 });
