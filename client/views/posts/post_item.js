@@ -10,12 +10,13 @@ Template.postItem.helpers({
     upvotedClass: function() {
         var userId = Meteor.userId();
         if (userId && !_.include(this.upvoters, userId)) {
-            return 'btn-primary upvotable';
+            return 'btn-primary upvoteable';
         } else {
             return 'disabled';
         }
     }
 });
+
 Template.postItem.events({
     'click .upvoteable': function(e) {
         e.preventDefault();
